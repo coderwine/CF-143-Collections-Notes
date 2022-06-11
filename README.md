@@ -6,12 +6,12 @@
     - ```List<T>```
   - Queues
     - ```Queue<T>```
+    - FIFO (First in First Out)
   - Stack
     - ```Stack<T>```
     - LIFO (Last in First Out)
   - Dictionaries
     - ```Dictionary<TKey,TValue>```
-    - FIFO (First in First Out)
 
 [Commonly used Collection Types Resource](https://docs.microsoft.com/en-us/dotnet/standard/collections/commonly-used-collection-types)
 
@@ -69,21 +69,12 @@ The Application will resemble a **deck of cards**. The Repository names, althoug
   ```
 
 ---
-## Helpful Commands
-```
-dotnet add [Need Reference File Path] refrence [Path to Target]
-
-ex: 
-dotnet add .\Collections.UI reference .\Collections.Data
-```
-
 ## Collection Notes:
 ### Array:
   - Namespace: **System**
     - Provides methods for creating, manipulating, searching, and sorting arrays.
     - Not part of the **System.Collections** namespaces; however, considered a collection because it is based on the **IList** interface.
-  - The Array class is the base class for arrays. Each item within the array is considered an element. 
-  - [Array Methods](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0#methods)
+  - The Array class is the base class for arrays. Each item within the array is considered an element.
   - [Array Docs](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
 
 ### Lists:
@@ -93,7 +84,7 @@ dotnet add .\Collections.UI reference .\Collections.Data
 - [List Methods](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0)
 
 ### Queues:
-- Namespace: **System.Collection**
+- Namespace: **System.Collections**
 - Represents a First-In, First-Out collection of objects (FIFO).
   - Considered a circular array.
   - Objects stored in a Queue are inserted at one end and removed from the other.
@@ -145,3 +136,14 @@ Based on the IDictionary interface. Every element contains both KEY and a VALUE.
 Get creative with how this application can be manipulated. Use this as a sort of sandbox to toy around with varous collection methods and build out new methods for your specific classes.
 
 Enjoy!
+
+## Helpful Commands
+```
+dotnet run --project [FILE PATH]
+
+// Reference a file from source folder
+dotnet add [Need Reference File Path] refrence [Path to Target]
+
+ex: 
+dotnet add .\Collections.UI reference .\Collections.Data
+```
